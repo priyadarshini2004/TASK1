@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+		<link rel ="stylesheet" image.css>  
+<style>
+	* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	color: black;
+	font-family: "Roboto slab";       
+	background-color: teal;
+        
+}
+
+nav {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 5%;
+	background-color: rgb(192, 192, 192);
+}
+
+nav .heading {
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+        
+        
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	padding: 8px 15px;
+	border-radius: 10px;
+	transition: 0.2s ease-in;
+}
+
+nav ul li a {
+	color: black;
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #454545;
+}
+
+
+nav ul li a:hover {
+	color: white;
+}
+
+nav .sideMenuButton {
+	font-size: 30px;
+	font-weight: bolder;
+	cursor: pointer;
+	display: none;
+        
+}
+
+
+.sideNavigationBar {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0%;
+	overflow-x: hidden;
+	transition: 0.3s ease-in;
+	padding-top: 40px;
+	display: none;
+}
+
+.sideNavigationBar a {
+	padding: 8px 8px 8px 40px;	
+	font-size: 25px;
+	font-weight: 500;	
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+.sideNavigationBar a button {
+	padding: 10px 20px;
+	border-radius: 10px;	
+	font-size: 16px;
+	border-style: none;
+	font-weight: 700;
+}
+
+.sideNavigationBar a:hover {
+	color: white;
+}
+
+.sideNavigationBar .closeButton {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 20px;
+	margin-left: 50px;
+}
+
+.line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2% 5%;
+}
+
+.line .side1 {
+	padding-right: 50px;
+}
+
+.side1 h1 {
+	font-size: 60px;
+	margin-bottom: 10px;
+	color:#F60697  ;
+}
+
+.side1 button {
+	width: 200px;
+	padding: 12px 20px;
+	border-radius: 20px;
+	border-style: none;
+	color:#34495E ;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+/* section */
+
+section .topic a {
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.about .boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about .boxes .box {
+	margin: 10px 20px;
+	max-width: calc(100% / 3 - 50px);
+	text-align: center;
+	border-radius: 12px;
+	padding: 30px 10px;
+	box-shadow: 0 5px 10px #06223E;
+	cursor: default;
+}
+
+/* Contact Page */
+
+.contact {
+	padding: 20px;
+}
+
+.contact .content {
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.content .title {
+	width: 80%;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 40px;
+	font-family:"cursive";
+}
+
+.title {
+	margin-bottom: 30px;
+	margin-left: 80px;
+    font-style:"poiret one"
+}
+
+.contactMenu {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.input2 {
+	margin-top: 10;
+}
+
+.label1 {
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-weight: bolder;
+}
+
+.contactMenu .input1 input {
+	border-radius: 13px;
+	padding: 6px;
+}
+
+.input2 input {
+	border-color: rgb(0, 0, 0);
+	width: 400px;
+}
+
+.button {
+	margin-top: 12px;
+	margin-left: 5px;
+}
+
+.button button {
+	width: 162px;
+	height: 35px;
+	border-radius: 12px;
+	border-color: #34495E;
+}
+
+
+button {
+	width: 162px;
+	height: 35px;
+	border-radius: 12px;
+	border-color: transparent;
+}
+
+
+.rightside1 {
+	display: flex;
+	flex-direction: column;
+	margin-left: 300px;
+}
+
+.title1 {
+	font-size: 18px;
+    
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-weight: bolder;
+}
+
+
+.content1 {
+	width: 450px;
+	margin-top: 2px;
+	color: black;
+}
+
+/* Footer */
+footer {
+	background: var(--primary-color);
+	padding: 15px 0;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+}
+
+footer .footer span {
+	font-size: 17px;
+	font-weight: 400;
+	color: var(--white-color);
+}
+
+footer .footer span a {
+	font-weight: 500;
+	color: var(--white-color);
+}
+
+footer .footer span a:hover {
+	text-decoration: underline;
+}
+
+
+	<title>LANDING PAGE</title>
+</style>
+</head>
+
+<body>
+	<nav>
+		<div class="heading">Landing Page</div>
+		<span class="sideMenuButton"
+			onclick="openNavbar()">
+			☰
+		</span>
+
+		<div class="navbar">
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Sign Up</a></li>
+                <li><a href="#">Sign In</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Side navigation bar for
+		responsive website -->
+	<div class="sideNavigationBar"
+		id="sideNavigationBar">
+		<a href="#" class="closeButton"
+			onclick="closeNavbar()">
+			
+		</a>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Sign Up</a>
+        <a href="#">Sign In</a>
+	</div>
+
+	<!-- Content -->
+	<div class="line" id="Home">
+		<div class="side1">
+			<h1>BOOK MART</h1>
+			
+			
+				
+					
+				
+			
+		</div>
+		<div class="side2">
+			<img src=
+"data:image/png;base64,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"
+				width="300",height="400">
+		</div>
+	</div>
+
+	<section class="about" id="My Projects">
+		<div class="content">
+			<div class="title">
+				<span>CHOOSE YOUR BEST COMPATIBLE</span>
+			</div>
+            
+			<div class="boxes">
+				<div class="box">
+					<div class="topic">
+						<a href="" target="_blank">
+                            FICTION
+						</a>
+					</div>
+					<p>
+						 END YOUR DAY WITH THESE FANTASY BOOKS!!
+                                    GET UPTO 60% OFF
+					</p>
+				</div>
+				<div class="box">
+
+					<div class="topic">
+						<a href="" target="_blank">
+							NON-FICTION
+						</a>
+					</div>
+					<p>
+						 FREE TIMES ARE NOW KNOWLEDGE GAINING TIMES.
+                                     GET UPTO 40% OFF.
+					</p>
+				</div>
+
+				<div class="box">
+					<div class="topic">
+						<a href="" target="_blank">
+							REFERENCE BOOKS
+						</a>
+					</div>
+					<p>
+						THESE BOOKS WILL HELP YOU TO GET HIGH SCORE IN ACADEMICS.
+                                    SAVE UPTO FLAT 40%!
+                                                          
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="content">
+			<div class="title"><span>REGISTER NOW!</span></div>
+			<div class="contactMenu">
+				<div class="input1">
+					<div class="label1">USERNAME</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Username">
+					</div>
+					<div class="label1">
+						<label> Email ID</label>
+					</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Email ID">
+					</div>
+					<div class="label1">
+						<label>Contact number</label>
+					</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Contact number">
+					</div>
+					<div class="button">
+						<button>LOGIN</button>
+					</div>
+				</div>
+				<div class="input3">
+					<div class="rightside1">
+						<div class="title1">
+							<span>
+								Contact Details
+							</span>
+						</div>
+						<div class="content1">
+							Email:infobookmart@gmail.com<br>
+							P87C+PVM,Panduranga Swamy Temple Rd,
+							Pandurangapuram,Visakhapatnam,
+							Andhra Pradesh-530003
+						</div>
+						<div class="title1">
+							<span>ABOUT US</span>
+						</div>
+						<div class="content1">
+							HEARTLY welcome to all the BOOK LOVERS our here!
+							We really welcome you to the platform where we
+							consistently strive to offer the best
+							compatible patners. This platform has been
+							specially designed for every book holic wishing to
+							expand their interest, share their
+							happiness and is ready to have their
+							loved books.Thank you for choosing
+							and supporting us!
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer section -->
+	<footer>
+		<div class="footer">
+			<span>
+				Created By
+				<p>
+                                     BOOK MART
+                                 </p>
+			</span>
+		</div>
+	</footer>
+	
+</body>
+
+</html>
